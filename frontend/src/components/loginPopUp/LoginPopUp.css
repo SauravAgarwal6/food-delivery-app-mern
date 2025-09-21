@@ -1,0 +1,113 @@
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* darker overlay */
+  display: grid;
+  place-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.login-popup-container {
+  width: clamp(330px, 25vw, 400px);
+  background-color: #ffffff;
+  color: #444;
+  padding: 30px 35px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  animation: popupSlide 0.3s ease;
+}
+.login-popup-container p {
+    cursor: pointer;
+}
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #222;
+}
+
+.login-popup-title img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.login-popup-title img:hover {
+  transform: scale(1.15);
+}
+
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-popup-inputs input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.login-popup-inputs input:focus {
+  border-color: tomato;
+  outline: none;
+}
+
+.login-popup-container button {
+  padding: 12px;
+  color: white;
+  background-color: tomato;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login-popup-container button:hover {
+  background-color: #e74c3c;
+}
+
+.login-popup-conditions {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #666;
+  margin-top: -10px;
+}
+
+.login-popup-conditions input {
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.login-popup p {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+}
+
+.login-popup p span {
+  color: tomato;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: text-decoration 0.2s;
+}
+
+.login-popup p span:hover {
+  text-decoration: underline;
+}
+
+
+

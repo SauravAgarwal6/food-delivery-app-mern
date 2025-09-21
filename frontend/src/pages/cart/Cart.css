@@ -1,0 +1,148 @@
+.cart {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+/* TITLE */
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* ITEM BLOCK */
+.cart-items-item {
+    color: black;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px; /* NEW: Rounded item blocks */
+    background-color: #fdfdfd; /* NEW: Light background */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); /* NEW: Subtle shadow */
+}
+
+.cart-items-item img {
+    width: 50px;
+    border-radius: 6px; /* NEW: Rounded image */
+}
+
+/* LINE */
+.cart hr {
+    height: 1px;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+/* REMOVE BUTTON */
+.cart-items-item .cross {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.cart-items-item .cross:hover {
+    color: darkred; /* NEW: Hover effect */
+}
+
+/* BOTTOM SECTION */
+.cart-bottom {
+    margin: 80px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: max(12vw, 20px);
+}
+
+/* TOTAL SUMMARY */
+.cart-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* REDUCED: Decreased vertical spacing */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 470px; /* ADDED: Prevents the box from getting too wide */
+    width: 100%; /* ADDED: Ensures responsiveness */
+}
+.cart-total h2 {
+    margin-bottom: 10px;
+}
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.cart-total hr {
+    margin: 10px 0;
+    border: none;
+    background-color: #ddd;
+    height: 1px;
+}
+
+/* BUTTON */
+.cart-total button {
+    border: none;
+    color: white;
+    background-color: tomato;
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.cart-total button:hover {
+    background-color: #e44d26; /* NEW: Hover */
+}
+
+/* PROMO CODE */
+.cart-promocode {
+    flex: 1;
+}
+.cart-promocode p {
+    color: #555;
+}
+.card-promocode-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    margin-top: 10px;
+    border-radius: 6px;
+    padding: 4px 6px;
+}
+.card-promocode-inputs input {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+    flex: 1;
+}
+.card-promocode-inputs button {
+    border: none;
+    padding: 10px 14px;
+    color: white;
+    background-color: tomato;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.card-promocode-inputs button:hover {
+    background-color: #e44d26;
+}
+
+/* RESPONSIVE */
+@media (max-width: 750px) {
+    .cart-bottom {
+        flex-direction: column-reverse;
+    }
+    .cart-promocode {
+        justify-content: flex-start;
+    }
+    .cart-total button {
+        width: 100%;
+    }
+}
