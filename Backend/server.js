@@ -3,6 +3,7 @@ import cors from 'cors';
 import { connectDB } from './config/db.js';
 import foodRouter from './routes/foodRoutes.js';
 import userRouter from './routes/userRoutes.js';
+<<<<<<< HEAD
 import 'dotenv/config';
 import cartRouter from './routes/cartRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
@@ -37,6 +38,21 @@ const corsOptions = {
 app.use(cors(corsOptions));
 // --- End of CORS Configuration ---
 
+=======
+import 'dotenv/config'; // Use this simplified import for dotenv
+import cartRouter from './routes/cartRoutes.js';
+import orderRouter from './routes/orderRoutes.js';
+
+
+// App config
+const app = express();
+// Use the PORT from the .env file, or default to 3000
+const port = process.env.PORT || 3000;
+
+// Middleware
+app.use(express.json()); // This must come before your routes to parse JSON bodies
+app.use(cors());
+>>>>>>> 960c846b42f67166581196036a556aa319d6d218
 
 // DB Connection
 connectDB();
@@ -45,13 +61,23 @@ connectDB();
 app.use('/api/food', foodRouter);
 app.use('/api/user', userRouter);
 app.use('/images', express.static('uploads'));
+<<<<<<< HEAD
 app.use('/api/cart', cartRouter);
 app.use('/api/order', orderRouter);
+=======
+app.use('/api/cart',cartRouter);
+app.use('/api/order',orderRouter);
+>>>>>>> 960c846b42f67166581196036a556aa319d6d218
 
 app.get('/', (req, res) => {
     res.send('API is Working');
 });
 
 app.listen(port, () => {
+<<<<<<< HEAD
     console.log(`Server is Running on port: ${port}`);
 });
+=======
+    console.log(`Server is Running on http://localhost:${port}`);
+});
+>>>>>>> 960c846b42f67166581196036a556aa319d6d218
