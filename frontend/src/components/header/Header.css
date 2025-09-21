@@ -1,0 +1,106 @@
+.header {
+  height: 34vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: url('/header_img.png') no-repeat center;
+  background-size: contain;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-contains {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.header-contains h2 {
+  color: #ead3d3;
+  font-size: clamp(32px, 4vw, 50px);
+  margin: 0;
+}
+
+.header-contains p {
+  color: #ffffff;
+  font-size: clamp(14px, 1.4vw, 18px);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.header-contains button {
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: clamp(14px, 1.2vw, 18px);
+  color: #747474;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: none;
+  transition: background-color 0.3s ease;
+  font-weight: 400;
+}
+
+.header-contains button:hover {
+  background-color: #ede1e1;
+}
+
+
+/* For screens below 1050px */
+@media (max-width: 1050px) {
+  .header-contains {
+    max-width: 60%;
+    left: 5vw;
+    gap: 2vw;
+  }
+
+  .header {
+    background-size: cover;
+  }
+}
+
+/* For screens below 950px */
+@media (max-width: 950px) {
+  .header-contains {
+    max-width: 70%;
+    left: 4vw;
+  }
+}
+
+/* For screens below 700px - mobile view */
+@media (max-width: 700px) {
+  .header {
+    height: 80vw;
+    justify-content: center;
+    background-position: top center;
+    background-size: cover;
+    padding: 20px;
+  }
+
+  .header-contains {
+    position: static;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .header-contains p {
+    display: none;
+  }
+
+  .header-contains h2 {
+    font-size: 24px;
+  }
+
+  .header-contains button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

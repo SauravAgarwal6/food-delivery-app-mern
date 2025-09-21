@@ -1,0 +1,121 @@
+/* ================== Main Form Container ================== */
+.place-order {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/* ================== Left Side: Delivery Info ================== */
+.place-order-left {
+    width: 100%;
+    max-width: 500px; /* Limits width on larger screens */
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and basis */
+}
+
+.place-order-left .title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.place-order-left input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #c9c9c9;
+    border-radius: 6px;
+    outline-color: tomato;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.place-order-left .multi-field {
+    display: flex;
+    gap: 15px;
+}
+
+/* ================== Right Side: Cart Totals ================== */
+.place-order-right {
+    width: 100%;
+    max-width: 420px; /* Limits width on larger screens */
+    flex: 1 1 300px;
+}
+
+.cart-total {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.cart-total h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c2c2c;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555;
+    font-size: 16px;
+}
+
+.cart-total hr {
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+.cart-total button {
+    width: 100%;
+    padding: 14px 0;
+    margin-top: 20px;
+    border: none;
+    background-color: tomato;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-total button:hover {
+    background-color: #e55a41;
+}
+
+
+/* ================== Media Query for Responsiveness ================== */
+@media (max-width: 768px) {
+    .place-order {
+        flex-direction: column; /* Stack left and right sections vertically */
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    .place-order-left,
+    .place-order-right {
+        max-width: 100%; /* Allow both sections to take full width */
+    }
+
+    .place-order-left .title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .cart-total h2 {
+        font-size: 22px;
+    }
+}

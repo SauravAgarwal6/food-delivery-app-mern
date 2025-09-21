@@ -1,0 +1,110 @@
+/* --- Add.css --- */
+
+/* Main container for the "Add" page */
+.add {
+  width: 70%;
+  margin-left: max(5vw, 25px); /* Responsive margin */
+  margin-top: 50px;
+  color: #4b4b4b;
+  font-size: 16px;
+}
+
+/* Form styling for a clean, card-like appearance */
+.add form {
+  gap: 20px;
+}
+
+/* Utility class for flex-column layout with a small gap */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Image upload area styling */
+.add-image-upload img {
+  width: 120px;
+  cursor: pointer;
+}
+
+/* Product name input field styling */
+.add-product-name,
+.add-product-description {
+  width: max(40%, 280px); /* Responsive width */
+}
+
+/* General styling for all input, select, and textarea fields */
+.add-product-name input,
+.add-product-description textarea,
+.add-category select,
+.add-price input {
+  padding: 10px;
+  border: 1px solid #c9c9c9;
+  border-radius: 4px;
+  outline-color: tomato; /* Highlight color on focus */
+  font-size: 1rem;
+}
+
+/* Styling for the container holding category and price */
+.add-product-price {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Specific styling for category and price sections */
+.add-category,
+.add-price {
+  width: max(25%, 120px);
+}
+
+/* The main "ADD" button styling */
+.add-btn {
+  max-width: 120px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-btn:hover {
+  background-color: #333333;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For tablets and smaller laptops (up to 900px) */
+@media (max-width: 900px) {
+  .add {
+    width: 85%; /* Use more width on medium screens */
+    margin-left: max(4vw, 20px);
+  }
+}
+
+/* For mobile devices (up to 750px) */
+@media (max-width: 750px) {
+  .add {
+    width: 90%; /* Use even more width on small screens */
+    margin-left: max(3vw, 15px);
+  }
+  
+  .add-product-price {
+    flex-direction: column; /* Stack category and price vertically */
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .add-category,
+  .add-price {
+    width: 100%; /* Make them full-width */
+  }
+
+  .add-btn {
+    max-width: 100px;
+    padding: 8px;
+  }
+}
