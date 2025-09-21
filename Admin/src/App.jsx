@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../src/components/Navbar/Navbar";
 import Sidebar from "../src/components/sidebar/Sidebar";
 import { Route, Routes } from "react-router-dom";
-import Add from "./pages/add/add";
+import Add from "./pages/add/Add";
 import Orders from "./pages/order/Orders";
 import List from "./pages/list/List";
 // import TrackOrderPage from './pages/TrackOrder/TrackOrderPage';
