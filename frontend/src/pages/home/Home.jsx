@@ -4,7 +4,7 @@ import Header from '../../components/header/Header'
 import ExploreMenu from '../../components/exploreMenu/ExploreMenu'
 import FoodDisplay from '../../components/foodDisplay/FoodDisplay'
 import AppDownload from '../../components/appDownload/AppDownload'
-import BackToTopButton from '../../components/backToTopButton/backToTopButton'
+import BackToTopButton from '../../components/backToTopButton/BackToTopButton'
 const Home = () => {
   const[category,setCategory]= useState("All");
   return (
