@@ -19,6 +19,7 @@ app.use(express.json());
 const allowedOrigins = [
   "http://localhost:5173", // Your local admin panel for development
   "https://tomato-food-delievery.netlify.app",
+  "https://adminfood-del.netlify.app",
 ];
 
 const corsOptions = {
