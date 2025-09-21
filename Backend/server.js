@@ -18,7 +18,7 @@ app.use(express.json());
 // Define the URLs that are allowed to access your backend
 const allowedOrigins = [
   "http://localhost:5173", // Your local admin panel for development
-  // "https://your-deployed-frontend-url.com" // IMPORTANT: Add your deployed frontend URL here later
+  "https://tomato-food-delievery.netlify.app",
 ];
 
 const corsOptions = {
